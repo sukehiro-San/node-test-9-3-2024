@@ -9,7 +9,7 @@ export async function UserValidation(
   res: Response,
   next: NextFunction
 ) {
-  const user = plainToClass(User, req.query);
+  const user = plainToClass(User, req.body);
   let errors = await validate(user);
 
   if (errors.length) {

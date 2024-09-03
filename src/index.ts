@@ -12,7 +12,7 @@ app.get("/", (req: Request, res: Response) => {
   res.status(200).send("Hello world!");
 });
 
-app.get("/user",UserValidation, (req: Request, res: Response) => {
+app.post("/user",UserValidation, (req: Request, res: Response) => {
   res.status(200).send("Successfully validated");
 });
 
